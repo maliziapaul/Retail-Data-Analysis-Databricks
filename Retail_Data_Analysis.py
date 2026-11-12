@@ -21,8 +21,8 @@
 # MAGIC %md
 # MAGIC ## a) Upload the data files to the Databricks file system
 # MAGIC
-# MAGIC The 305 CSV files were uploaded through **Catalog → workspace → default → Create → Volume** (`retail_data`), then **Upload to this volume**.
-# MAGIC Unity Catalog volumes are the Databricks file system for files in current workspaces. The cell below lists what was uploaded.
+# MAGIC The 305 CSV files were uploaded to the Unity Catalog volume `workspace.default.retail_data`, which is the Databricks file system for files in current workspaces
+# MAGIC (the older DBFS root is turned off in new and Free Edition workspaces). The cell below lists what was uploaded.
 
 # COMMAND ----------
 
