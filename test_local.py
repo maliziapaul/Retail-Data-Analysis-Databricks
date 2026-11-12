@@ -2,7 +2,7 @@
 import os, glob, types
 from pyspark.sql import SparkSession
 spark = SparkSession.builder.master("local[*]").getOrCreate(); spark.sparkContext.setLogLevel("ERROR")
-LOCAL = os.path.expanduser("~/Desktop/by-day")
+LOCAL = os.path.expanduser("~/Desktop/retail_data")
 class FS:
     def ls(self, p): return [types.SimpleNamespace(name=os.path.basename(f), size=os.path.getsize(f)) for f in glob.glob(LOCAL + "/*")]
 src = open("Retail_Data_Analysis.py").read().replace('"/Volumes/workspace/default/retail_data"', repr(LOCAL))
